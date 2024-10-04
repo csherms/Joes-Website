@@ -1,77 +1,410 @@
-body {
+/* Basic Reset */
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif; /* More modern and sporty font */
+  line-height: 1.6;
+  background-color: #f0f0f0;
   color: #333;
 }
 
+/* Header */
 header {
-  background-color: #4a4a4a;
-  color: white;
-  padding: 20px 0;
+  background: #232323; /* Dark background for contrast */
+  color: #fff;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  margin-right: 25px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #f48c06; /* Sporty orange hover effect */
+}
+
+.cta-button {
+  background-color: #f48c06;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e67f04;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url("hero-image.jpg"); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 120px 20px;
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+.hero-buttons .button {
+  background-color: #f48c06;
+  padding: 15px 30px;
+  color: #fff;
+  text-decoration: none;
+  margin-right: 15px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.hero-buttons .button:hover {
+  background-color: #e67f04;
+}
+
+/* Featured Health Philosophies */
+.philosophies {
+  padding: 60px 20px;
+  background-color: #fff;
   text-align: center;
 }
 
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 10px 0;
-  background-color: #333;
+.philosophies h2 {
+  font-size: 2.5rem;
+  color: #333;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
 }
 
-nav a {
-  color: white;
+.philosophy-cards {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.philosophy-card {
+  background-color: #232323;
+  color: #fff;
+  padding: 30px;
+  width: 250px;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+
+.philosophy-card:hover {
+  transform: translateY(-10px);
+}
+
+.philosophy-card h3 {
+  font-size: 1.5rem;
+  color: #f48c06;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.philosophy-card p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.philosophy-card a {
+  color: #f48c06;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.philosophy-card a:hover {
+  color: #e67f04;
+}
+
+/* Health Concept Categories */
+.health-categories {
+  padding: 60px 20px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+.health-categories h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+}
+
+.category {
+  background-color: #fff;
+  padding: 40px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.category:hover {
+  transform: translateY(-10px);
+}
+
+.category h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #f48c06;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.category p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.category a {
+  color: #f48c06;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.category a:hover {
+  color: #e67f04;
+}
+
+/* Learning Hub Section */
+.learning-hub {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.learning-hub h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+}
+
+.learning-hub .courses,
+.learning-hub .resources {
+  background-color: #f48c06;
+  color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.learning-hub .courses:hover,
+.learning-hub .resources:hover {
+  transform: translateY(-10px);
+}
+
+.learning-hub h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.learning-hub p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+/* Events Section */
+.events {
+  padding: 60px 20px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+.events h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+}
+
+.event-item {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+}
+
+.event-item:hover {
+  transform: translateY(-10px);
+}
+
+.event-item h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #f48c06;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.event-item p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.event-item a {
+  color: #f48c06;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.event-item a:hover {
+  color: #e67f04;
+}
+
+/* Blog Section */
+.blog {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.blog h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+}
+
+.blog-posts {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.blog-post {
+  background-color: #fafafa;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 250px;
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+
+.blog-post:hover {
+  transform: translateY(-10px);
+}
+
+.blog-post h3 {
+  font-size: 1.5rem;
+  color: #f48c06;
+  margin-bottom: 15px;
+}
+
+.blog-post p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+  background: #232323;
+  color: #fff;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-about,
+.footer-links,
+.footer-newsletter {
+  flex: 1;
+  margin: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.footer-links ul li a {
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
 }
 
-nav a:hover {
-  color: #f4f4f9;
+.footer-newsletter input {
+  padding: 10px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 25px;
 }
 
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 60vh;
-  background: url("https://example.com/hero.jpg") no-repeat center/cover;
-  color: white;
-  text-align: center;
+.footer-newsletter button {
+  padding: 10px 20px;
+  background-color: #f48c06;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
 }
 
-.hero h1 {
-  font-size: 3em;
-}
-
-.services {
-  padding: 50px 20px;
-  text-align: center;
-}
-
-.services h2 {
-  margin-bottom: 20px;
-}
-
-.services .service {
-  display: inline-block;
-  width: 30%;
-  padding: 20px;
-  margin: 10px;
-  background: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.contact {
-  padding: 50px 20px;
-  background-color: #333;
-  color: white;
-  text-align: center;
-}
-
-footer {
-  background-color: #4a4a4a;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
+.footer-newsletter button:hover {
+  background-color: #e67f04;
 }
