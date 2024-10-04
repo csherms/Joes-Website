@@ -10,29 +10,40 @@ body {
   line-height: 1.6;
   background-color: #f0f0f0;
   color: #333;
+  padding: 40px; /* Reduced space inside the border */
+  border: 5px solid rgba(0, 0, 0, 0.1); /* Subtle border around the whole page */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Slight shadow around the page */
+  /* max-width: 1500px; */
+  margin: auto; /* Center the page content */
 }
 
 /* Header */
 header {
   background: #232323; /* Dark background for contrast */
+  border: 2px solid white;
+  border-radius: 5px;
   color: #fff;
-  padding: 15px 0;
+  padding: 30px;
+  margin: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow under the header */
 }
 
 nav ul {
   list-style: none;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 nav ul li {
-  margin-right: 25px;
+  margin-right: 20px;
 }
 
 nav ul li a {
@@ -70,9 +81,12 @@ nav ul li a:hover {
   background-position: center;
   color: #fff;
   text-align: center;
-  padding: 120px 20px;
+  padding: 80px 20px; /* Adjusted padding */
   background-blend-mode: overlay;
   background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow under the hero section */
+  border-radius: 10px; /* Rounded corners for floating effect */
+  margin-bottom: 20px;
 }
 
 .hero h1 {
@@ -107,16 +121,19 @@ nav ul li a:hover {
 
 /* Featured Health Philosophies */
 .philosophies {
-  padding: 60px 20px;
+  padding: 40px 20px; /* Reduced padding */
   background-color: #fff;
   text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Floating effect with shadow */
+  border-radius: 10px; /* Rounded edges */
+  margin-bottom: 20px;
 }
 
 .philosophies h2 {
   font-size: 2.5rem;
   color: #333;
   text-transform: uppercase;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   font-weight: 700;
   letter-spacing: 1.5px;
 }
@@ -125,20 +142,23 @@ nav ul li a:hover {
   display: flex;
   gap: 30px;
   justify-content: center;
+  flex-wrap: wrap; /* Wrap cards on smaller screens */
 }
 
 .philosophy-card {
   background-color: #232323;
   color: #fff;
-  padding: 30px;
+  padding: 20px;
   width: 250px;
   border-radius: 15px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Card shadow */
 }
 
 .philosophy-card:hover {
   transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
 }
 
 .philosophy-card h3 {
@@ -166,14 +186,17 @@ nav ul li a:hover {
 
 /* Health Concept Categories */
 .health-categories {
-  padding: 60px 20px;
+  padding: 40px 20px;
   background-color: #f0f0f0;
   text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for floating effect */
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 .health-categories h2 {
   font-size: 2.5rem;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   color: #333;
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -182,14 +205,16 @@ nav ul li a:hover {
 
 .category {
   background-color: #fff;
-  padding: 40px;
-  margin-bottom: 30px;
+  padding: 30px;
+  margin-bottom: 20px;
   border-radius: 10px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Floating effect */
 }
 
 .category:hover {
   transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Shadow increases on hover */
 }
 
 .category h3 {
@@ -217,194 +242,142 @@ nav ul li a:hover {
   color: #e67f04;
 }
 
-/* Learning Hub Section */
-.learning-hub {
-  padding: 60px 20px;
-  background-color: #fff;
-  text-align: center;
+/* MEDIA QUERIES */
+
+/* Extra Small Devices (up to 360px) */
+@media (max-width: 360px) {
+  body {
+    padding: 10px;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .philosophy-card {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .category {
+    padding: 15px;
+  }
 }
 
-.learning-hub h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: #333;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  font-weight: 700;
+/* Small Devices (up to 640px) */
+@media (max-width: 640px) {
+  body {
+    padding: 15px;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cta-button {
+    margin-top: 10px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .philosophy-cards,
+  .blog-posts {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .category {
+    padding: 20px;
+  }
+
+  .category h3 {
+    font-size: 1.4rem;
+  }
 }
 
-.learning-hub .courses,
-.learning-hub .resources {
-  background-color: #f48c06;
-  color: #fff;
-  padding: 30px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  transition: transform 0.3s ease;
+/* Medium Devices (up to 768px) */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.4rem;
+  }
+
+  .category {
+    padding: 25px;
+  }
+
+  .category h3 {
+    font-size: 1.6rem;
+  }
 }
 
-.learning-hub .courses:hover,
-.learning-hub .resources:hover {
-  transform: translateY(-10px);
+/* Large Devices (up to 1024px) */
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1.5rem;
+  }
+
+  .category {
+    padding: 30px;
+  }
+
+  .category h3 {
+    font-size: 1.8rem;
+  }
 }
 
-.learning-hub h3 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
+/* Extra Large Devices (up to 1280px) */
+@media (max-width: 1280px) {
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero p {
+    font-size: 1.7rem;
+  }
+
+  .category {
+    padding: 35px;
+  }
+
+  .category h3 {
+    font-size: 2rem;
+  }
 }
 
-.learning-hub p {
-  font-size: 1rem;
-  margin-bottom: 20px;
-}
+/* 2XL Devices (up to 1536px) */
+@media (max-width: 1536px) {
+  .hero h1 {
+    font-size: 4rem;
+  }
 
-/* Events Section */
-.events {
-  padding: 60px 20px;
-  background-color: #f0f0f0;
-  text-align: center;
-}
+  .hero p {
+    font-size: 2rem;
+  }
 
-.events h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: #333;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  font-weight: 700;
-}
+  .category {
+    padding: 40px;
+  }
 
-.event-item {
-  background-color: #fff;
-  padding: 40px;
-  border-radius: 10px;
-  margin-bottom: 30px;
-  transition: transform 0.3s ease;
-}
-
-.event-item:hover {
-  transform: translateY(-10px);
-}
-
-.event-item h3 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  color: #f48c06;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-.event-item p {
-  font-size: 1rem;
-  margin-bottom: 20px;
-  color: #555;
-}
-
-.event-item a {
-  color: #f48c06;
-  font-weight: bold;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.event-item a:hover {
-  color: #e67f04;
-}
-
-/* Blog Section */
-.blog {
-  padding: 60px 20px;
-  background-color: #fff;
-  text-align: center;
-}
-
-.blog h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: #333;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  font-weight: 700;
-}
-
-.blog-posts {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-}
-
-.blog-post {
-  background-color: #fafafa;
-  padding: 30px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  width: 250px;
-  transition: transform 0.3s ease;
-  text-align: left;
-}
-
-.blog-post:hover {
-  transform: translateY(-10px);
-}
-
-.blog-post h3 {
-  font-size: 1.5rem;
-  color: #f48c06;
-  margin-bottom: 15px;
-}
-
-.blog-post p {
-  font-size: 1rem;
-  margin-bottom: 20px;
-}
-
-/* Footer */
-footer {
-  background: #232323;
-  color: #fff;
-  padding: 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.footer-about,
-.footer-links,
-.footer-newsletter {
-  flex: 1;
-  margin: 10px;
-}
-
-.footer-links ul {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-}
-
-.footer-links ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.footer-newsletter input {
-  padding: 10px;
-  margin-right: 10px;
-  border: none;
-  border-radius: 25px;
-}
-
-.footer-newsletter button {
-  padding: 10px 20px;
-  background-color: #f48c06;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  border-radius: 25px;
-  transition: background-color 0.3s ease;
-}
-
-.footer-newsletter button:hover {
-  background-color: #e67f04;
+  .category h3 {
+    font-size: 2.2rem;
+  }
 }
